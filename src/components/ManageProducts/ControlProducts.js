@@ -8,16 +8,17 @@ const ControlProducts = ({controlProduct}) => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log('deleted successfully',data)
+            // console.log('deleted successfully',data)
+            alert('This product is deleted. please check Home Page........');
         })
     }
     return (
-        <div>
-            <h3>{controlProduct.name}</h3>
-            <p>{controlProduct.price}</p>
-            <button>edit</button>
-            <button onClick={() => deleteProduct(controlProduct._id)}>Delete</button>
-        </div>
+                <tr>
+                <td>{controlProduct.name}</td>
+                <td>{controlProduct.price}</td>
+                <td><button>edit</button></td>
+                <td><button onClick={() => deleteProduct(controlProduct._id)}>Delete</button></td>
+                </tr>
     );
 };
 

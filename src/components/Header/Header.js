@@ -7,15 +7,18 @@ const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
         <div className="header">
-            <h1>Electronics Shop</h1>
-            <nav>
-                <Link to="/">Home</Link>
-                <Link to="/addProducts">Add Product</Link>
-                <Link to="/manageProducts">Manage Products</Link>
-                <Link to="/orders">Orders</Link>
-                <button onClick={()=> setLoggedInUser({})}>Sign out</button>
-                {/* <h3>email: {loggedInUser.email}</h3> */}
+            <nav className="d-flex justify-content-between">
+                <h1 className="text-white font-weight-bold">Electronics Shop</h1>
+                <div className="navbar navbar-expand-lg justify-content-end">
+                    <Link to="/" className="font-weight-bold">Home</Link>
+                    <Link to="/addProducts" className="font-weight-bold">Add Product</Link>
+                    <Link to="/manageProducts" className="font-weight-bold">Manage Products</Link>
+                    <Link to="/orders" className="font-weight-bold">Orders</Link>
+                    <button onClick={()=> setLoggedInUser({})} className="font-weight-bold btn btn-success">Sign out</button>
+                    {/* <h3>email: {loggedInUser.email}</h3> */}
+                </div>
             </nav>
+            
         </div>
     );
 };

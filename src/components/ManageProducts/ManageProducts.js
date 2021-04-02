@@ -9,11 +9,21 @@ const ManageProducts = () => {
         .then(data => setControlProducts(data))
     }, [])
     return (
-        <div>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                <th scope="col">Product Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
             {
-                controlProducts.map(controlProduct => <ControlProducts controlProduct={controlProduct}></ControlProducts>)
+                controlProducts.map(controlProduct =>  <ControlProducts controlProduct={controlProduct}></ControlProducts>)
             }
-        </div>
+            </tbody>
+        </table>
     );
 };
 

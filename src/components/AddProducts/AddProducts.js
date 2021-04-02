@@ -39,18 +39,23 @@ const AddProducts = () => {
         });
     }
     return (
-        <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <input name="name" defaultValue="New exciting Product" ref={register} />
-                <br/>
-                <input name="price"  ref={register} />
-                <br/>
-                <input name="exampleRequired" type="file" onChange={handleImageUpload}/>
-                <br/>
-                <input type="submit" />
-              
-            </form>
-        </div>
+            <div className="card text-white bg-success mb-3" style={{textAlign:'center'}}>
+                <div className="card-header"><h1>Add Product</h1></div>
+                <div className="card-body" >
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <h5>Product Name</h5>
+                        <input name="name" defaultValue="New exciting Product" ref={register} />
+                        <br/><br/>
+                        <h5>Product Price</h5>
+                        <input name="price"  ref={register} />
+                        <br/><br/>
+                        <h5>Add Product Photo</h5>
+                        <input name="exampleRequired" type="file" onChange={handleImageUpload}/>
+                        <br/><br/>
+                        <input className="btn btn-secondary" type="submit" />
+                    </form>
+                </div>
+            </div>
     );
 };
 

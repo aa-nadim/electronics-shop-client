@@ -43,27 +43,32 @@ const Shipment = () => {
             .then(data => {
               if (data) {
                 // processOrder();
-                alert('your order placed successfully');
+                alert('your order placed successfully,  please  check your Order Page.....');
               }
             })
         }
     return (
-      <form onSubmit={handleSubmit(onSubmit)} className="ship-form">
-      
-        <input name="name" defaultValue={loggedInUser.name}  ref={register({ required: true })} placeholder="Your Name" />
-        {errors.name && <span className="error">Name is required</span>}
+        <div className="card text-white bg-success mb-3" style={{textAlign:'center'}}>
+          <div className="card-header"><h1>Please give your address for shipment</h1></div>
+          <div className="card-body" >
+            <form onSubmit={handleSubmit(onSubmit)} className="ship-form">
+        
+              <input name="name" defaultValue={loggedInUser.name}  ref={register({ required: true })} placeholder="Your Name" />
+              {errors.name && <span className="error">Name is required</span>}
 
-        <input name="email" defaultValue={loggedInUser.email}  ref={register({ required: true })} placeholder="Your Email" />
-        {errors.email && <span className="error">Email is required</span>}
+              <input name="email" defaultValue={loggedInUser.email}  ref={register({ required: true })} placeholder="Your Email" />
+              {errors.email && <span className="error">Email is required</span>}
 
-        <input name="address" ref={register({ required: true })} placeholder="Your Address" />
-        {errors.address && <span className="error">Address is required</span>}
+              <input name="address" ref={register({ required: true })} placeholder="Your Address" />
+              {errors.address && <span className="error">Address is required</span>}
 
-        <input name="phone" ref={register({ required: true })} placeholder="Your Phone Number" />
-        {errors.phone && <span className="error">Phone Number is required</span>}
+              <input name="phone" ref={register({ required: true })} placeholder="Your Phone Number" />
+              {errors.phone && <span className="error">Phone Number is required</span>}
 
-        <input type="submit" />
-      </form>
+              <input className="btn btn-secondary" type="submit" />
+            </form>
+          </div>
+        </div>
     );
 };
 

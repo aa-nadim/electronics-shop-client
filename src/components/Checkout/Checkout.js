@@ -24,11 +24,32 @@ const Checkout = () => {
     }
     return (
         <div>
-            <div>
-                <p>This is Product Detail Component : {ProductId}</p>
-                <h3>Name: {productData.name}</h3>
-                <p>Price: {productData.price}</p>
-                <button onClick={handleShipment}>Checkout</button>
+            <table className="table">
+            <thead className="thead-dark">
+                <tr>
+                <th scope="col">Product ID</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>{ProductId}</td>
+                <td>{productData.name}</td>
+                <th scope="row">1</th>
+                <td>{productData.price}</td>
+                </tr>
+                <tr>
+                <td>Total</td>
+                <td></td>
+                <th scope="row"></th>
+                <td>{productData.price}</td>
+                </tr>
+            </tbody>
+            </table>
+            <div className="d-flex justify-content-center">
+                <button className="btn btn-secondary" onClick={handleShipment}>Checkout</button>
             </div>
         </div>
     );
