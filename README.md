@@ -2,7 +2,7 @@
 
 client ==>
 
-## [Code](https://github.com/Porgramming-Hero-web-course/full-stack-client-aa-nadim)
+## Code === https://github.com/Porgramming-Hero-web-course/full-stack-client-aa-nadim
 
-## [Live](https://electronics-shop-clien.web.app/)
+## Live === https://electronics-shop-clien.web.app/
 
