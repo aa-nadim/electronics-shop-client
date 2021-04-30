@@ -11,7 +11,6 @@ A Servicing and Repairing website for Electronic products.
   `Dashboards are different for users and admin.`
   
   `Admin can add and delete all products and also see all orders.`
-  
   `Admin can make an admin.`
 ## Technologies: 
 • React, Express, MongoDB, Firebase, Heroku. 
