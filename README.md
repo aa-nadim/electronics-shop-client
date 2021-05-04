@@ -2,7 +2,7 @@
 
 An online electronic product buying website.
 
-## server == https://github.com/aa-nadim/Like-Electronics-server-side
+## server == https://github.com/aa-nadim/electronics-shop-server
 
 ## Features:
   • Users can buy any available product. 
